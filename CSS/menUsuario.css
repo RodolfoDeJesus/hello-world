@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background: #56070C;
+    
+}
+
+.content-all{
+    width: 100%;
+    height: auto;
+    background: #F2F2F2;
+    margin: auto;
+    margin-top: 80px;
+    
+}
+
+header{
+    width: 100%;
+    height: 65px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #F2F2F2;
+    
+}
+#secretaria{
+    background: #56070C;
+    margin-right: 8%;
+}
+#check{
+    display: none;
+}
+
+
+
+.menu{
+    
+    width:260px;
+    height: 100vh;
+    background: #56070C;
+    transition: all 600ms cubic-bezier(1,0,0,2);
+    transition-timing-function: cubic-bezier(1,0,1,-2);
+    /*La overflowpropiedad CSS controla lo que sucede con 
+    el contenido que es demasiado grande para caber en un área
+    ejemplo mostrando un scroll.*/
+    overflow: auto;
+}
+.menu li{
+
+    padding: 10px;
+    color: white;
+    transition: all 300ms;
+    display: block;
+    width: 249px;
+}
+.menul li{
+    list-style: none;
+    padding: 14px;
+    color: white;
+    cursor: pointer;
+    transition: all 300ms;
+    display: block;
+    width: 230px;
+}
+.menul > ul > li > a{
+    color: white;
+    text-decoration: none;
+}
+ul{
+    font-weight: 100;
+    transform: translateX(0px);
+}
+
+.menu li:hover{
+    background: rgb(23, 85, 255);
+    border: 1px solid #ffffff;
+}
+.menul li:hover{
+    background: rgb(212, 175, 55);
+    border: .5px solid rgb(255, 196, 0);
+    }
+
+
+.content-all h2{
+    position: absolute;
+    width: 100%;
+    
+    top: 14px;
+    font-size: 26px;
+    color: black;
+    text-align: center;
+    }
+.content-all h3{
+    position: absolute;
+    width: 100%;
+    top: 55px;
+    font-size: 26px;
+    color: white;
+    text-align: center;
+}
+img{
+    position: absolute;
+    top: 0px;
+}
+
+
+hover ul {
+    font-weight: 100;
+    transform: translateX(0px);
+}

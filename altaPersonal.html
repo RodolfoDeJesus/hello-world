@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/estiloIndex.css">
+		<link rel="icon" type="text/css" href="picture/images.png">
+		<link href = "https://fonts.googleapis.com/css?family= PT + Serif & display = swap" rel = "hoja de estilo">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Alta a Personal</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script>
+    function ordenarSelect(id_componente)
+    {
+      var selectToSort = jQuery('#' + id_componente);
+      var optionActual = selectToSort.val();
+      selectToSort.html(selectToSort.children('option').sort(function (a, b) {
+        return a.text === b.text ? 0 : a.text < b.text ? -1 : 1;
+      })).val(optionActual);
+    }
+    $(document).ready(function () {
+      ordenarSelect('Departamento');
+    });
+  </script>
+	</head>
+	<body>
+	 <div class="content-all">
+		 <header>
+            <img src="picture/logo_S.png"width="15%">    
+         </header>
+        
+          <h2>Dirección de Protección Contra Riesgos Sanitarios</h2>
+            <h3>Secretaría de Salud</h3>
+		<form id="ventanilla"action="altaPersonal.php" method="POST">
+			<label id="texto">Alta de Personal</label><br><br>
+			<input type="text"  id="usuario" class="campos" name="nombre" placeholder="Nombre Completo" required="">
+			<input type="text" id="puesto" class="campos" name="puesto" placeholder="Puesto o Cargo" required=""><br>
+			<label >Departamento </label><br>
+		<select id="Departamento"class="campos" style="height: 35px;width:200px"name="departamento">
+				<option disabled="disabled" selected="selected">.Selecciona un Departamento.</option>
+				<option value="4">Coordinación Informática</option>
+				<option value="3">Coordinación Administrativa</option>
+				<option value="2">Secretaría Técnica</option>
+				<option value="1">Secretaría Particular</option>
+				<option value="7">Coordinación de Emergencias</option>
+				<option value="6">Enlace Federal</option>
+				<option value="5">Asesor Jurídico</option>
+			</select><br>
+			<button class="botones" style="width:310px"name="registro">Registrarse</button>
+		</form>
+		
+	  </div>
+	</body>
+</html>
